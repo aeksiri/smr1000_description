@@ -1775,8 +1775,6 @@
       </plugin>
     </sensor>
   </gazebo>
-     
-</robot>
 
   <!-- Rear LiDAR SICK Microscan MICS3-AAAZ55AZ1P01 -->
   <gazebo reference="lidar_rear_right_link">
@@ -1815,3 +1813,5 @@
       </plugin>
     </sensor>
   </gazebo>
+     
+</robot>
