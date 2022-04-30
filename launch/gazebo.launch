@@ -1,6 +1,9 @@
 <launch>
   <include
     file="$(find gazebo_ros)/launch/empty_world.launch" />
+  
+  <param name="/use_sim_time" value="true"/>
+  
   <node
     name="tf_footprint_base"
     pkg="tf"
