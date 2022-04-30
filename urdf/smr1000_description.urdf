@@ -1730,5 +1730,12 @@
     </plugin>
   </gazebo>
 
+  <link name="lidar_merged_link"/>
+
+  <joint name="base_link_to_lidar_merged_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_merged_link"/>
+    <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
+  </joint>     
   
 </robot>
