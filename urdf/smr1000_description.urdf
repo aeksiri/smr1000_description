@@ -856,7 +856,7 @@
       xyz="0 0 0" />
   </joint>
   <link
-    name="depth_cam_front_right_mount_point_link">
+    name="depthcam_front_right_link">
     <inertial>
       <origin
         xyz="0.00129156660960061 -0.000225188275228549 0.0124773964669809"
@@ -877,7 +877,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://smr1000_description/meshes/depth_cam_front_right_mount_point_link.STL" />
+          filename="package://smr1000_description/meshes/depthcam_front_right_link.STL" />
       </geometry>
       <material
         name="">
@@ -891,7 +891,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://smr1000_description/meshes/depth_cam_front_right_mount_point_link.STL" />
+          filename="package://smr1000_description/meshes/depthcam_front_right_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -904,12 +904,12 @@
     <parent
       link="base_link" />
     <child
-      link="depth_cam_front_right_mount_point_link" />
+      link="depthcam_front_right_link" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="depth_cam_front_left_mount_point_link">
+    name="depthcam_front_left_link">
     <inertial>
       <origin
         xyz="0.00129157634096388 -0.000225205852197596 0.0124773728078798"
@@ -930,7 +930,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://smr1000_description/meshes/depth_cam_front_left_mount_point_link.STL" />
+          filename="package://smr1000_description/meshes/depthcam_front_left_link.STL" />
       </geometry>
       <material
         name="">
@@ -944,7 +944,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://smr1000_description/meshes/depth_cam_front_left_mount_point_link.STL" />
+          filename="package://smr1000_description/meshes/depthcam_front_left_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -957,7 +957,7 @@
     <parent
       link="base_link" />
     <child
-      link="depth_cam_front_left_mount_point_link" />
+      link="depthcam_front_left_link" />
     <axis
       xyz="0 0 0" />
   </joint>
@@ -1823,7 +1823,7 @@
   </link>
 
   <joint name="depthcam_front_left_view_joint" type="fixed">
-    <parent link="depth_cam_front_left_mount_point_link"/>
+    <parent link="depthcam_front_left_link"/>
     <child link="depthcam_front_left_view_link"/>
     <origin xyz="0.0 0.0 0.0" rpy="-1.5708 0.0 -1.5708"/>
   </joint>
@@ -1879,7 +1879,7 @@
   </link>     
      
   <joint name="depthcam_front_right_view_joint" type="fixed">
-    <parent link="depth_cam_front_right_mount_point_link"/>
+    <parent link="depthcam_front_right_link"/>
     <child link="depthcam_front_right_view_link"/>
     <origin xyz="0.0 0.0 0.0" rpy="-1.5708 0.0 -1.5708"/>
   </joint>
