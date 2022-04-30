@@ -1739,7 +1739,7 @@
   </joint>     
 
   <!-- Front LiDAR SICK Microscan MICS3-AAAZ55AZ1P01 -->
-  <gazebo reference="lidar_front_link">
+  <gazebo reference="lidar_front_left_link">
     <sensor type="gpu_ray" name="lidar_front_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
