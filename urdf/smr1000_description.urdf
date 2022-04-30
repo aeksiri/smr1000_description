@@ -1832,7 +1832,8 @@
     <sensor name="depthcam_front_left" type="depth">
       <update_rate>20</update_rate>
       <camera>
-        <horizontal_fov>1.2042771839</horizontal_fov> <!-- RealSense D435 -->
+        <horizontal_fov>1.2042771839</horizontal_fov> <!-- RealSense D435 = 69 deg -->
+        <vertical_fov>0.73303828584</vertical_fov> <!-- RealSense D435 = 42 def -->
         <image>
           <width>640</width>
           <height>480</height>
@@ -1888,8 +1889,8 @@
     <sensor name="depthcam_front_right" type="depth">
       <update_rate>20</update_rate>
       <camera>
-        <horizontal_fov>1.2042771839</horizontal_fov> <!-- RealSense D435 -->
-        <vertical_fov>1.2042771839</vertical_fov> <!-- RealSense D435 -->
+        <horizontal_fov>1.2042771839</horizontal_fov> <!-- RealSense D435 = 69 deg -->
+        <vertical_fov>0.73303828584</vertical_fov> <!-- RealSense D435 = 42 def -->
         <image>
           <width>640</width>
           <height>480</height>
