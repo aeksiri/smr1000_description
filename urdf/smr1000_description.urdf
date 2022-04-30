@@ -1755,8 +1755,7 @@
         </scan>
         <range>
           <min>0.05</min>
-          <max>30.0</max> <!-- white object -->
-          <!-- <max>10.0</max> --> <!-- black object -->
+          <max>40.0</max> <!-- white object -->
           <resolution>0.05</resolution> <!-- 0.03, 0.04, 0.05, 0.07, 0.15, 0.20 [mm] -->
         </range>
         <noise>
@@ -1793,8 +1792,7 @@
         </scan>
         <range>
           <min>0.05</min>
-          <max>30.0</max> <!-- white object -->
-          <!-- <max>10.0</max> --> <!-- black object -->
+          <max>40.0</max> <!-- white object -->
           <resolution>0.05</resolution> <!-- 0.03, 0.04, 0.05, 0.07, 0.15, 0.20 [mm] -->
         </range>
         <noise>
