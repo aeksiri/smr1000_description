@@ -1889,6 +1889,7 @@
       <update_rate>20</update_rate>
       <camera>
         <horizontal_fov>1.2042771839</horizontal_fov> <!-- RealSense D435 -->
+        <vertical_fov>1.2042771839</vertical_fov> <!-- RealSense D435 -->
         <image>
           <width>640</width>
           <height>480</height>
