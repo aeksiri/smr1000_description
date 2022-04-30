@@ -1,0 +1,5 @@
+1. Base footprint (rectangle) = 950 x 1460
+2. Base footprint (radius) = 900
+3. Wheel diameter = 199.6
+4. Wheel separate = 816.8
+5. Base footprint to the top = 299.8

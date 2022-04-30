@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="smr1000_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0653513068168296 0.00948609134574523 0.175579356834395"
+        rpy="0 0 0" />
+      <mass
+        value="68.6102338369016" />
+      <inertia
+        ixx="1.00754057887286"
+        ixy="0.00041340404807901"
+        ixz="0.000216201033298126"
+        iyy="3.29228934484251"
+        iyz="3.79978600731642E-05"
+        izz="4.23027118253916" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="swing_right_link">
+    <inertial>
+      <origin
+        xyz="-0.176347650188863 0.00440389227080025 -0.300793675091469"
+        rpy="0 0 0" />
+      <mass
+        value="25.0168854199356" />
+      <inertia
+        ixx="0.0682466016837255"
+        ixy="-0.00949922807571882"
+        ixz="-9.30065521097321E-05"
+        iyy="0.172623060051642"
+        iyz="-4.59700602586555E-06"
+        izz="0.197181082598249" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/swing_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/swing_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="swing_right_joint"
+    type="revolute">
+    <origin
+      xyz="0.22 -0.3799 0.1223"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="swing_right_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.5236"
+      upper="0.5236"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel_right_link">
+    <inertial>
+      <origin
+        xyz="-1.89360408194331E-07 5.32318273128995E-06 -0.00123251961550358"
+        rpy="0 0 0" />
+      <mass
+        value="7.69591298907116" />
+      <inertia
+        ixx="0.0241713576513514"
+        ixy="1.19672901117117E-07"
+        ixz="3.40566483541933E-08"
+        iyy="0.0241679260711374"
+        iyz="-1.02517453763162E-06"
+        izz="0.0461678453168516" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/wheel_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/wheel_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.22 -0.0225 0.0285"
+      rpy="0 0 0" />
+    <parent
+      link="swing_right_link" />
+    <child
+      link="wheel_right_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="20" />
+  </joint>
+  <link
+    name="caster_arm_front_right_link">
+    <inertial>
+      <origin
+        xyz="-0.0155555617039367 -0.000178963669494714 0.0281895860641981"
+        rpy="0 0 0" />
+      <mass
+        value="1.25269802738413" />
+      <inertia
+        ixx="0.00100221826493282"
+        ixy="-4.97387950814633E-08"
+        ixz="0.000216362342476403"
+        iyy="0.000957690978837859"
+        iyz="5.5425881475455E-08"
+        izz="0.00123742855747407" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_arm_front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.20999986644946 -0.0138199999999889 -0.0149995745198013"
+      rpy="1.57079632679491 0 0" />
+    <parent
+      link="swing_right_link" />
+    <child
+      link="caster_arm_front_right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_front_right_link">
+    <inertial>
+      <origin
+        xyz="5.22706102568105E-07 -7.27056550867133E-08 -3.43081149989377E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.44285896681486" />
+      <inertia
+        ixx="0.000795470204249507"
+        ixy="9.7830862267861E-10"
+        ixz="1.63526977773804E-08"
+        iyy="0.000795524588628693"
+        iyz="-2.05415020657229E-09"
+        izz="0.00122117998887139" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_front_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0449998664494292 0 0.0684800000000012"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="caster_arm_front_right_link" />
+    <child
+      link="caster_wheel_front_right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_arm_rear_right_link">
+    <inertial>
+      <origin
+        xyz="-0.0155555617039297 -0.000178963669520582 0.0281895860641979"
+        rpy="0 0 0" />
+      <mass
+        value="1.25269802738413" />
+      <inertia
+        ixx="0.00100221826493282"
+        ixy="-4.97387949983293E-08"
+        ixz="0.000216362342476399"
+        iyy="0.00095769097883786"
+        iyz="5.54258818883207E-08"
+        izz="0.00123742855747408" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_rear_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_rear_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_arm_rear_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.425000133550558 -0.360000425480045 0.108280000000031"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_arm_rear_right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_rear_right_link">
+    <inertial>
+      <origin
+        xyz="5.22706269046047E-07 -7.27055614602179E-08 -3.43081175468996E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.44285896681486" />
+      <inertia
+        ixx="0.00079547020424951"
+        ixy="9.78308624551728E-10"
+        ixz="1.63526963921423E-08"
+        iyy="0.000795524588628698"
+        iyz="-2.05415021177103E-09"
+        izz="0.0012211799888714" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_rear_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_rear_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_rear_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0449998664494387 0 0.0684800000000013"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="caster_arm_rear_right_link" />
+    <child
+      link="caster_wheel_rear_right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="swing_left_link">
+    <inertial>
+      <origin
+        xyz="-0.145737324025481 -0.00429423142705054 -0.0146676077458625"
+        rpy="0 0 0" />
+      <mass
+        value="34.2220050178526" />
+      <inertia
+        ixx="0.0869972530035693"
+        ixy="0.0191225202017814"
+        ixz="-0.000118555323432275"
+        iyy="0.293111035161583"
+        iyz="-1.15917243083435E-06"
+        izz="0.333894919135107" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/swing_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/swing_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="swing_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.22 0.3799 0.1223"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="swing_left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5236"
+      upper="0.5236"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel_left_link">
+    <inertial>
+      <origin
+        xyz="-1.89360408143877E-07 5.32318273170629E-06 -0.00123251961550752"
+        rpy="0 0 0" />
+      <mass
+        value="7.69591298907121" />
+      <inertia
+        ixx="0.0241713576513516"
+        ixy="1.19672901089617E-07"
+        ixz="3.40566483462889E-08"
+        iyy="0.0241679260711376"
+        iyz="-1.02517453763785E-06"
+        izz="0.0461678453168519" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/wheel_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/wheel_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.22 0.0225 0.0285"
+      rpy="0 0 3.1416" />
+    <parent
+      link="swing_left_link" />
+    <child
+      link="wheel_left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="20" />
+  </joint>
+  <link
+    name="caster_arm_front_left_link">
+    <inertial>
+      <origin
+        xyz="-0.015555561703935 -0.000178963669518362 0.0281895860641979"
+        rpy="0 0 0" />
+      <mass
+        value="1.25269802738414" />
+      <inertia
+        ixx="0.00100221826493283"
+        ixy="-4.97387950034294E-08"
+        ixz="0.000216362342476401"
+        iyy="0.000957690978837865"
+        iyz="5.54258818844297E-08"
+        izz="0.00123742855747409" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_arm_front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.209999866449287 0.0138200000000299 -0.0150004254799135"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="swing_left_link" />
+    <child
+      link="caster_arm_front_left_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_front_left_link">
+    <inertial>
+      <origin
+        xyz="5.2271126804726E-07 -7.27069870490316E-08 -3.43084268550342E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.4428589671169" />
+      <inertia
+        ixx="0.000795470204330061"
+        ixy="9.78362437129432E-10"
+        ixz="1.63333455961673E-08"
+        iyy="0.000795524588877612"
+        iyz="-2.05418336631313E-09"
+        izz="0.00122117998906056" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_front_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0449998664494246 0 0.0684800000000196"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="caster_arm_front_left_link" />
+    <child
+      link="caster_wheel_front_left_link" />
+    <axis
+      xyz="0 0 0.999999999999999" />
+  </joint>
+  <link
+    name="caster_arm_rear_left_link">
+    <inertial>
+      <origin
+        xyz="-0.0155555617039362 -0.000178963669523857 0.0281895860641979"
+        rpy="0 0 0" />
+      <mass
+        value="1.25269802738414" />
+      <inertia
+        ixx="0.00100221826493283"
+        ixy="-4.97387949996866E-08"
+        ixz="0.000216362342476401"
+        iyy="0.000957690978837868"
+        iyz="5.54258818845771E-08"
+        izz="0.00123742855747409" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_rear_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_arm_rear_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_arm_rear_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.425 0.36 0.10828"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_arm_rear_left_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_rear_left_link">
+    <inertial>
+      <origin
+        xyz="5.22706270988937E-07 -7.2705561453279E-08 -3.43081178744153E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.44285896681486" />
+      <inertia
+        ixx="0.00079547020424951"
+        ixy="9.78308624271734E-10"
+        ixz="1.63526963933961E-08"
+        iyy="0.000795524588628699"
+        iyz="-2.05415021156819E-09"
+        izz="0.0012211799888714" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_rear_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/caster_wheel_rear_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_rear_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0449998664491558 0 0.0682800000000365"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="caster_arm_rear_left_link" />
+    <child
+      link="caster_wheel_rear_left_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="imu_mount_point_link">
+    <inertial>
+      <origin
+        xyz="-0.00366346362566691 4.70438937990503E-18 0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0191449557316286" />
+      <inertia
+        ixx="1.03105094962783E-06"
+        ixy="1.48004796281085E-22"
+        ixz="-1.35200558106493E-24"
+        iyy="1.06001917810793E-06"
+        iyz="-5.99321577353147E-24"
+        izz="2.0625376554058E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/imu_mount_point_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.792156862745098 0.792156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/imu_mount_point_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_mount_point_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.2263"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_mount_point_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_front_left_link">
+    <inertial>
+      <origin
+        xyz="-0.00377362004536375 2.31306614323357E-05 -0.0414763691510298"
+        rpy="0 0 0" />
+      <mass
+        value="10.0983088016372" />
+      <inertia
+        ixx="0.0243292329693736"
+        ixy="-3.09919812669073E-06"
+        ixz="0.000468083181899324"
+        iyy="0.0235663383506721"
+        iyz="1.87770443375014E-06"
+        izz="0.0145919886558837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/lidar_front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/lidar_front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_front_left_joint"
+    type="fixed">
+    <origin
+      xyz="0.63989 0.41011 0.1198"
+      rpy="-3.1416 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_front_left_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_rear_right_link">
+    <inertial>
+      <origin
+        xyz="-0.00377362130663683 2.31306166637579E-05 -0.0414763701929062"
+        rpy="0 0 0" />
+      <mass
+        value="10.0983090366446" />
+      <inertia
+        ixx="0.0243292330596011"
+        ixy="-3.09920536514796E-06"
+        ixz="0.000468083190282274"
+        iyy="0.0235663383727439"
+        iyz="1.87773510402846E-06"
+        izz="0.0145919887338157" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/lidar_rear_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/lidar_rear_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_rear_right_joint"
+    type="fixed">
+    <origin
+      xyz="-0.6399 -0.41011 0.1198"
+      rpy="-3.1416 0 -2.3906" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_rear_right_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="depth_cam_front_right_mount_point_link">
+    <inertial>
+      <origin
+        xyz="0.00129156660960061 -0.000225188275228549 0.0124773964669809"
+        rpy="0 0 0" />
+      <mass
+        value="0.0375455004175735" />
+      <inertia
+        ixx="2.35547052251239E-05"
+        ixy="2.10677706877401E-07"
+        ixz="1.01532427492793E-08"
+        iyy="3.51383162343571E-06"
+        iyz="1.73092061435004E-09"
+        izz="2.37573063309254E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/depth_cam_front_right_mount_point_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.701960784313725 0.701960784313725 0.701960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/depth_cam_front_right_mount_point_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="depth_cam_front_right_mount_point_joint"
+    type="fixed">
+    <origin
+      xyz="0.64905 -0.0086345 0.22192"
+      rpy="1.6224 -0.25484 -0.5779" />
+    <parent
+      link="base_link" />
+    <child
+      link="depth_cam_front_right_mount_point_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="depth_cam_front_left_mount_point_link">
+    <inertial>
+      <origin
+        xyz="0.00129157634096388 -0.000225205852197596 0.0124773728078798"
+        rpy="0 0 0" />
+      <mass
+        value="0.0375455045895058" />
+      <inertia
+        ixx="2.35547247200499E-05"
+        ixy="2.10674673662915E-07"
+        ixz="1.01543396749311E-08"
+        iyy="3.51384314444005E-06"
+        iyz="1.73013361251296E-09"
+        izz="2.37573138571017E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/depth_cam_front_left_mount_point_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.701960784313725 0.701960784313725 0.701960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/depth_cam_front_left_mount_point_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="depth_cam_front_left_mount_point_joint"
+    type="fixed">
+    <origin
+      xyz="0.63595 0.02931 0.2207"
+      rpy="1.5191 -0.25484 0.5779" />
+    <parent
+      link="base_link" />
+    <child
+      link="depth_cam_front_left_mount_point_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_front_side_left_link">
+    <inertial>
+      <origin
+        xyz="-0.0215388993520396 1.16554112161715E-06 5.30745762339357E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740091678654" />
+      <inertia
+        ixx="1.04081238975484E-06"
+        ixy="8.52837943094571E-10"
+        ixz="8.66889256101528E-11"
+        iyy="5.34668466071901E-06"
+        iyz="-1.0320017840319E-10"
+        izz="5.34689161660492E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_side_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_side_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_front_side_left_joint"
+    type="fixed">
+    <origin
+      xyz="0.58 0.47 0.0843"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_front_side_left_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_front_left_link">
+    <inertial>
+      <origin
+        xyz="-0.0215388993976965 5.46124688804994E-08 -1.16546995329592E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740092539146" />
+      <inertia
+        ixx="1.04081239493512E-06"
+        ixy="8.78070829314884E-11"
+        ixz="-8.52724102688024E-10"
+        iyy="5.34689136814173E-06"
+        iyz="1.03468053244033E-10"
+        izz="5.34668495428624E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_front_left_joint"
+    type="fixed">
+    <origin
+      xyz="0.7 0.33 0.0843"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_front_left_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_front_right_link">
+    <inertial>
+      <origin
+        xyz="-0.0215388993976957 5.46124687694771E-08 -1.16546995325428E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740092539146" />
+      <inertia
+        ixx="1.04081239493512E-06"
+        ixy="8.7807082929679E-11"
+        ixz="-8.5272410268927E-10"
+        iyy="5.34689136814173E-06"
+        iyz="1.03468053243951E-10"
+        izz="5.34668495428624E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_front_right_joint"
+    type="fixed">
+    <origin
+      xyz="0.7 -0.33 0.0843"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_front_right_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_front_right_side_link">
+    <inertial>
+      <origin
+        xyz="-0.021538899397696 8.63126642935974E-07 -7.85057406971212E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740092539145" />
+      <inertia
+        ixx="1.04081239493512E-06"
+        ixy="6.65330086919852E-10"
+        ixz="-5.40540798230751E-10"
+        iyy="5.3466845885743E-06"
+        iyz="1.03101970364321E-10"
+        izz="5.3468917338536E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_right_side_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_front_right_side_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_front_right_side_joint"
+    type="fixed">
+    <origin
+      xyz="0.58 -0.47 0.0843"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_front_right_side_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_rear_right_side_link">
+    <inertial>
+      <origin
+        xyz="-0.021538899397696 8.63126642491885E-07 -7.85057407123868E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740092539145" />
+      <inertia
+        ixx="1.04081239493512E-06"
+        ixy="6.65330086918126E-10"
+        ixz="-5.40540798235194E-10"
+        iyy="5.3466845885743E-06"
+        iyz="1.03101970363733E-10"
+        izz="5.3468917338536E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_right_side_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_right_side_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_rear_right_side_joint"
+    type="fixed">
+    <origin
+      xyz="-0.58 -0.47 0.0843"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_rear_right_side_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_rear_right_link">
+    <inertial>
+      <origin
+        xyz="-0.0215388993520402 -7.86195710700266E-07 -8.62090089079337E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740091678654" />
+      <inertia
+        ixx="1.04081238975484E-06"
+        ixy="-5.41412312078863E-10"
+        ixz="-6.64620369337873E-10"
+        iyy="5.34689144370168E-06"
+        iyz="-1.03373257032144E-10"
+        izz="5.34668483362224E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_rear_right_joint"
+    type="fixed">
+    <origin
+      xyz="-0.7 -0.33 0.0843"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_rear_right_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_rear_left_link">
+    <inertial>
+      <origin
+        xyz="-0.0215389016273483 -7.85445424866804E-07 -8.6235180102312E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740133510415" />
+      <inertia
+        ixx="1.04081251803691E-06"
+        ixy="-5.41070441240048E-10"
+        ixz="-6.64739216915381E-10"
+        iyy="5.34689247838743E-06"
+        iyz="-1.03333939118133E-10"
+        izz="5.34668596804642E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_rear_left_joint"
+    type="fixed">
+    <origin
+      xyz="-0.7 0.33 0.0808"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_rear_left_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ultrasonic_rear_left_side_link">
+    <inertial>
+      <origin
+        xyz="-0.0215388993973044 -3.95983975387537E-07 -1.09749723893604E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0282740092531792" />
+      <inertia
+        ixx="1.04081239535758E-06"
+        ixy="-2.45524785360508E-10"
+        ixz="-8.21319887680717E-10"
+        iyy="5.34693430246721E-06"
+        iyz="6.91239388246022E-14"
+        izz="5.34664202004202E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_left_side_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://smr1000_description/meshes/ultrasonic_rear_left_side_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ultrasonic_rear_left_side_joint"
+    type="fixed">
+    <origin
+      xyz="-0.580000000000014 0.47 0.0808000000000311"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_rear_left_side_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
