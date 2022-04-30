@@ -26,7 +26,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScanFront
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -107,16 +107,24 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        depth_cam_front_left_mount_point_link:
+        depthcam_front_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        depth_cam_front_right_mount_point_link:
+        depthcam_front_left_view_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        depthcam_front_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        depthcam_front_right_view_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         imu_mount_point_link:
           Alpha: 1
           Show Axes: false
@@ -127,6 +135,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        lidar_merged_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         lidar_rear_right_link:
           Alpha: 1
           Show Axes: false
@@ -199,62 +211,10 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        base_link:
-          Value: true
-        caster_arm_front_left_link:
-          Value: true
-        caster_arm_front_right_link:
-          Value: true
-        caster_arm_rear_left_link:
-          Value: true
-        caster_arm_rear_right_link:
-          Value: true
-        caster_wheel_front_left_link:
-          Value: true
-        caster_wheel_front_right_link:
-          Value: true
-        caster_wheel_rear_left_link:
-          Value: true
-        caster_wheel_rear_right_link:
-          Value: true
-        depth_cam_front_left_mount_point_link:
-          Value: true
-        depth_cam_front_right_mount_point_link:
-          Value: true
-        imu_mount_point_link:
-          Value: true
-        lidar_front_left_link:
-          Value: true
-        lidar_rear_right_link:
-          Value: true
-        swing_left_link:
-          Value: true
-        swing_right_link:
-          Value: true
-        ultrasonic_front_left_link:
-          Value: true
-        ultrasonic_front_right_link:
-          Value: true
-        ultrasonic_front_right_side_link:
-          Value: true
-        ultrasonic_front_side_left_link:
-          Value: true
-        ultrasonic_rear_left_link:
-          Value: true
-        ultrasonic_rear_left_side_link:
-          Value: true
-        ultrasonic_rear_right_link:
-          Value: true
-        ultrasonic_rear_right_side_link:
-          Value: true
-        wheel_left_link:
-          Value: true
-        wheel_right_link:
-          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -262,52 +222,120 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_link:
-          caster_arm_rear_left_link:
-            caster_wheel_rear_left_link:
-              {}
-          caster_arm_rear_right_link:
-            caster_wheel_rear_right_link:
-              {}
-          depth_cam_front_left_mount_point_link:
-            {}
-          depth_cam_front_right_mount_point_link:
-            {}
-          imu_mount_point_link:
-            {}
-          lidar_front_left_link:
-            {}
-          lidar_rear_right_link:
-            {}
-          swing_left_link:
-            caster_arm_front_left_link:
-              caster_wheel_front_left_link:
-                {}
-            wheel_left_link:
-              {}
-          swing_right_link:
-            caster_arm_front_right_link:
-              caster_wheel_front_right_link:
-                {}
-            wheel_right_link:
-              {}
-          ultrasonic_front_left_link:
-            {}
-          ultrasonic_front_right_link:
-            {}
-          ultrasonic_front_right_side_link:
-            {}
-          ultrasonic_front_side_left_link:
-            {}
-          ultrasonic_rear_left_link:
-            {}
-          ultrasonic_rear_left_side_link:
-            {}
-          ultrasonic_rear_right_link:
-            {}
-          ultrasonic_rear_right_side_link:
-            {}
+        {}
       Update Interval: 0
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: LaserScanFront
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /scan_front
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: LaserScanRear
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /scan_rear
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2Left
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /depthcam_front_left/depthcam_front_left/depth/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2Right
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /depthcam_front_right/depthcam_front_right/depth/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
       Value: true
   Enabled: true
   Global Options:
@@ -337,7 +365,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.086756229400635
+      Distance: 10.014394760131836
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -353,9 +381,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.785398006439209
+      Pitch: 0.584797203540802
       Target Frame: <Fixed Frame>
-      Yaw: 0.785398006439209
+      Yaw: 3.7903990745544434
     Saved: ~
 Window Geometry:
   Displays:
